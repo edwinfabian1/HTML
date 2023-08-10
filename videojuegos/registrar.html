@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="css/loginRegistro .css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&family=Rubik+Dirt&family=Saira+Stencil+One&display=swap" rel="stylesheet">
 
   
 </head>
@@ -25,11 +26,23 @@
       alert("Por favor, ingresa tu correo electrónico.");
       return false;
     }
+  
+    if (password.length < 8 ) {
+      alert("La contraseña es muy corta.");
+      return false;
+    }
+
 
     if (password === "") {
       alert("Por favor, ingresa tu contraseña.");
       return false;
     }
+
+   else {
+    alert("Ya puedes Inciar sesion");
+   }
+
+
 
     // Aquí podrías agregar más validaciones, como verificar el formato del correo electrónico o la fortaleza de la contraseña.
 
@@ -49,16 +62,16 @@
       <div class="form-row">
         <div class="mt-5 col-md-7 mb-3">
           <label for=" validationTooltip01">Nombre</label>
-          <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" value="" required>
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre" value="" required>
           <div class="valid-tooltip">
-            Looks good!
+    
           </div>
         </div>
         <div class="col-md-7 mb-3">
           <label for="validationTooltip02">Apellido</label>
           <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido" value="" required>
           <div class="valid-tooltip">
-            Looks good!
+          
           </div>
         </div>
         <div class="col-md-7 mb-3">
@@ -66,25 +79,21 @@
           <div class="input-group">
             <div class="input-group-prepend">
             </div>
-            <input type="Email" class="form-control" id="validationTooltipUsername" placeholder="Email" aria-describedby="validationTooltipUsernamePrepend" required>
-            <div class="invalid-tooltip">
-              
-            </div>
+            <input type="Email" class="form-control" id="email" placeholder="Email" aria-describedby="validationTooltipUsernamePrepend" required>
+            
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-md-7 mb-3">
           <label for="validationTooltip03">Contraseña</label>
-          <input type="text" class="form-control" id="validationTooltip03" placeholder="Contraseña" required>
-          <div class="invalid-tooltip">
-            
-          </div>
+          <input type="text" class="form-control" id="password" placeholder="Contraseña" required>
+         
         
         </div>
         
         </div>
-        <a href="login.html" class="mt-4 mb-3 btn btn-primary" type="submit">Continuar</a>
+        <a href="" class="mt-4 mb-3 btn btn-primary" onclick="validarFormulario()" type="submit">Continuar</a>
       </div>
       
     </form>

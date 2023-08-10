@@ -14,7 +14,16 @@ label{
 form{
   border-radius: 10%;
   border: solid transparent;
-  width: 51%;
+  width: 100%;
   background-color: rgba(0, 0, 19, 0.43);
-  
+  height: 450px;
 }
+
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik Dirt', cursive;
+    font-family: 'Saira Stencil One', cursive;
+
+}
+
